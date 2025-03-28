@@ -150,7 +150,6 @@ class music_cog(commands.Cog):
 
         except Empty:
             self.playing = False
-            await self.vc.disconnect()
             for i in Path('musics/').glob('*'):
                 i.unlink()
             
